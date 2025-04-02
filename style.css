@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, rgb(23, 234, 216), rgb(194, 150, 99));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);qq
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: #131010;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Floating currency symbols */
+.currency-symbols {
+    position: relative;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.symbol {
+    position: absolute;
+    font-size: 1.5em;
+    color: #fff;
+    background: #058ec9;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Position each symbol in a circular pattern */
+.symbol:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); animation-delay: 0s; }
+.symbol:nth-child(2) { top: 0px; left: 65%; transform: translateX(-50%); animation-delay: 0.4s; }
+.symbol:nth-child(3) { top: 0px; left: 35%; transform: translateX(-50%); animation-delay: 0.8s; }
+.symbol:nth-child(4) { top: 20px; left: 80%; transform: translateX(-50%); animation-delay: 1.2s; }
+.symbol:nth-child(5) { top: 20px; left: 20%; transform: translateX(-50%); animation-delay: 1.6s; }
+.symbol:nth-child(6) { top: 73px; left: 75%; transform: translateX(-50%); animation-delay: 2s; }
+.symbol:nth-child(7) { top: 73px; left: 25%; transform: translateX(-50%); animation-delay: 2.4s; }
+.symbol:nth-child(8) { top: 100px; left: 50%; transform: translateX(-50%); animation-delay: 2.8s; }
+.symbol:nth-child(9) { top: 100px; left: 35%; transform: translateX(-50%); animation-delay: 3.2s; }
+.symbol:nth-child(10) { top: 100px; left: 65%; transform: translateX(-50%); animation-delay: 3.2s; }
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0) translateX(-50%); }
+    50% { transform: translateY(-15px) translateX(-50%); }
+}
+
+.converter-box {
+    background: #a9a5a5da;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #050303;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    background: #ac0683;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0882ae;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #090202;
+    font-weight: bold;
+}
